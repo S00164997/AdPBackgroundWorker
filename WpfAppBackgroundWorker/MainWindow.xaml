@@ -3,10 +3,37 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:cm="clr-namespace:System.ComponentModel;assembly=System"
         xmlns:local="clr-namespace:WpfAppBackgroundWorker"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="250" Width="800" Background="Green">
+    
+
+
     <Grid>
-        
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Label x:Name="StuNo" Content="S00164997 Michael Chrystal"/>
+            <ProgressBar Grid.Row="1" 
+                     Width="400"
+                     Name="MyProgressBar"
+                     Height="20"/>
+            <TextBlock Grid.Row="2"
+                   HorizontalAlignment="Center"
+                   Name="ProgressTextBlock" />
+            <Button Grid.Row="4"
+                HorizontalAlignment="Center"
+                Width="70"
+                Name="DoWorkButton"
+                Content="Do Work" Click="DoWorkButton_Click"/>
+        </Grid>
+
     </Grid>
 </Window>
